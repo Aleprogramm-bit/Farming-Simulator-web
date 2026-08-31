@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tutti i Farming Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg-main: #050505;
+      --bg-card: #0b0b0b;
+      --neon-green: #39ff14;
+      --text-main: #e5e5e5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f0f0f 0, #000000 40%, #020202 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--neon-green);
+      text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #b0b0b0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #050505, #101010);
+      border-radius: 12px;
+      border: 1px solid rgba(57, 255, 20, 0.35);
+      box-shadow:
+        0 0 12px rgba(57, 255, 20, 0.25),
+        0 0 2px rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 0 18px rgba(57, 255, 20, 0.45),
+        0 0 4px rgba(0, 0, 0, 0.9);
+      border-color: rgba(57, 255, 20, 0.8);
+    }
+
+    .card-image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* 1:1 */
+      overflow: hidden;
+      background: #000;
+      border-bottom: 1px solid rgba(57, 255, 20, 0.35);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top; /* prende la parte sopra dell’immagine */
+      display: block;
+      filter: saturate(1.1) contrast(1.05);
+    }
+
+    .card-body {
+      padding: 10px 12px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--neon-green);
+      text-shadow: 0 0 6px rgba(57, 255, 20, 0.7);
+    }
+
+    .card-sub {
+      font-size: 0.8rem;
+      color: #9a9a9a;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    footer span {
+      color: var(--neon-green);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Farming Simulator – Serie completa</h1>
+      <p>Card con immagine 1:1 (parte sopra) e titolo &quot;Farming Simulator X&quot; che aprono <code>fs.html</code>.</p>
+    </header>
+
+    <main class="grid">
+      <!-- FS2008 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs2008.jpg"
+              alt="Farming Simulator 2008"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 2008</div>
+            <div class="card-sub">PC • primo capitolo della serie</div>
+          </div>
+        </article>
+      </a>
+
+      <!-- FS2011 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs2011.jpg"
+              alt="Farming Simulator 2011"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 2011</div>
+            <div class="card-sub">PC • miglioramenti grafici e gameplay</div>
+          </div>
+        </article>
+      </a>
+
+      <!-- FS2013 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs2013.jpg"
+              alt="Farming Simulator 2013"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 2013</div>
+            <div class="card-sub">PC / console • salto tecnico importante</div>
+          </div>
+        </article>
+      </a>
+
+      <!-- FS15 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs15.jpg"
+              alt="Farming Simulator 15"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 15</div>
+            <div class="card-sub">PC / console • legname e nuove mappe</div>
+          </div>
+        </article>
+      </a>
+
+      <!-- FS17 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs17.jpg"
+              alt="Farming Simulator 17"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 17</div>
+            <div class="card-sub">PC / console • stabile e perfetto per modding</div>
+          </div>
+        </article>
+      </a>
+
+      <!-- FS19 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs19.jpg"
+              alt="Farming Simulator 19"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 19</div>
+            <div class="card-sub">PC / console • GIANTS Engine 8</div>
+          </div>
+        </article>
+      </a>
+
+      <!-- FS22 -->
+      <a href="fs.html" class="card-link">
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img
+              src="img/fs22.jpg"
+              alt="Farming Simulator 22"
+              class="card-image"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-title">Farming Simulator 22</div>
+            <div class="card-sub">PC / console • stagioni e produzione</div>
+          </div>
+        </article>
+      </a>
+    </main>
+
+    <footer>
+      <span>Neon green &amp; black</span> • Modifica pure tutto: testi, immagini, link, stile.
+    </footer>
+  </div>
+</body>
+</html>
