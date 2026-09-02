@@ -25,9 +25,10 @@
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
       padding: 24px 12px;
+      gap: 32px;
     }
 
     .card {
@@ -79,9 +80,62 @@
       font-size: 0.9rem;
       color: var(--text-main);
     }
+
+    /* Screenshot section */
+    .screenshots {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #39ff14;
+      text-shadow: 0 0 8px rgba(57, 255, 20, 0.9);
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .grid-screens {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .shot {
+      background: linear-gradient(145deg, #050505, #101010);
+      border: 1px solid rgba(57, 255, 20, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(57, 255, 20, 0.3);
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .shot:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 18px rgba(57, 255, 20, 0.5);
+    }
+
+    .shot-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .shot-label {
+      text-align: center;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: #39ff14;
+      text-shadow: 0 0 6px rgba(57, 255, 20, 0.7);
+    }
   </style>
 </head>
 <body>
+
   <article class="card">
     <div class="card-title">Farming Simulator 2008</div>
 
@@ -120,77 +174,31 @@
         <div class="field-label">Animali</div>
         <div class="field-value">Nessuno</div>
       </div>
+
+      <div class="field">
+        <div class="field-label">Espansioni</div>
+        <div class="field-value">Platinum Edition, Gold Edition</div>
+      </div>
     </div>
   </article>
-  
+
   <section class="screenshots">
-  <h2 class="section-title">Screenshot</h2>
-  <div class="grid-screens">
-    <div class="shot">
-      <img src="img/aa.jpg" alt="Screenshot A" class="shot-img" />
-      <div class="shot-label">Screenshot A</div>
+    <h2 class="section-title">Screenshot</h2>
+    <div class="grid-screens">
+      <div class="shot">
+        <img src="img/aa.jpg" alt="Screenshot A" class="shot-img" />
+        <div class="shot-label">Screenshot A</div>
+      </div>
+      <div class="shot">
+        <img src="img/ab.jpg" alt="Screenshot B" class="shot-img" />
+        <div class="shot-label">Screenshot B</div>
+      </div>
+      <div class="shot">
+        <img src="img/ac.jpg" alt="Screenshot C" class="shot-img" />
+        <div class="shot-label">Screenshot C</div>
+      </div>
     </div>
-    <div class="shot">
-      <img src="img/ab.jpg" alt="Screenshot B" class="shot-img" />
-      <div class="shot-label">Screenshot B</div>
-    </div>
-    <div class="shot">
-      <img src="img/ac.jpg" alt="Screenshot C" class="shot-img" />
-      <div class="shot-label">Screenshot C</div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .screenshots {
-    margin-top: 28px;
-  }
-
-  .section-title {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #39ff14;
-    text-shadow: 0 0 8px rgba(57, 255, 20, 0.9);
-    margin-bottom: 14px;
-  }
-
-  .grid-screens {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-  }
-
-  .shot {
-    background: linear-gradient(145deg, #050505, #101010);
-    border: 1px solid rgba(57, 255, 20, 0.4);
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(57, 255, 20, 0.3);
-    overflow: hidden;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .shot:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 18px rgba(57, 255, 20, 0.5);
-  }
-
-  .shot-img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  .shot-label {
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.9rem;
-    color: #39ff14;
-    text-shadow: 0 0 6px rgba(57, 255, 20, 0.7);
-  }
-</style>
+  </section>
 
 </body>
 </html>
