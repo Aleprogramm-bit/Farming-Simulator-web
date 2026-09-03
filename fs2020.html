@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farming Simulator 20</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root { --bg-main:#050505; --bg-card:#0b0b0b; --neon-green:#39ff14; --text-main:#e5e5e5; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:system-ui,sans-serif; background:radial-gradient(circle at top,#0f0f0f,#000); color:var(--text-main); display:flex; flex-direction:column; align-items:center; padding:24px; }
+    .card { background:linear-gradient(145deg,#050505,#101010); border-radius:14px; border:1px solid rgba(57,255,20,0.5); box-shadow:0 0 14px rgba(57,255,20,0.4); max-width:700px; width:100%; padding:18px; }
+    .card-title { font-size:1.1rem; font-weight:700; text-transform:uppercase; color:var(--neon-green); margin-bottom:12px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+    .field { background:#0a0a0a; border-radius:10px; border:1px solid rgba(57,255,20,0.35); padding:10px; }
+    .field-label { font-size:0.75rem; text-transform:uppercase; color:#8cff7a; }
+    .field-value { font-size:0.9rem; }
+    .screenshots { max-width:900px; width:100%; margin-top:24px; }
+    .section-title { font-size:1.2rem; text-transform:uppercase; color:var(--neon-green); text-align:center; margin-bottom:14px; }
+    .grid-screens { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+    .shot { background:#0b0b0b; border:1px solid rgba(57,255,20,0.4); border-radius:12px; overflow:hidden; }
+    .shot-img { width:100%; aspect-ratio:16/9; object-fit:cover; }
+    .shot-label { text-align:center; padding:8px; color:var(--neon-green); }
+  </style>
+</head>
+<body>
+
+  <article class="card">
+    <div class="card-title">Farming Simulator 20</div>
+
+    <div class="grid">
+      <div class="field">
+        <div class="field-label">Anno</div>
+        <div class="field-value">2020</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Colture</div>
+        <div class="field-value">Grano, Orzo, Avena, Mais, Patate, Barbabietole, Cotone, Soia, Erba</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Marchi</div>
+        <div class="field-value">Case IH, New Holland, Fendt, Massey Ferguson, Challenger, Valtra, John Deere, Amazone, Kuhn, Pöttinger, Horsch, Väderstad, Grimme, Lizard</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Mappe</div>
+        <div class="field-value">Blue Lake Valley</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Dispositivi</div>
+        <div class="field-value">Nintendo Switch, Android, iOS</div>
+      </div>
+    </div>
+  </article>
+
+  <section class="screenshots">
+    <h2 class="section-title">Screenshot</h2>
+    <div class="grid-screens">
+      <div class="shot"><img src="img/bh.jpg" class="shot-img"><div class="shot-label">Screenshot H</div></div>
+      <div class="shot"><img src="img/bi.jpg" class="shot-img"><div class="shot-label">Screenshot I</div></div>
+      <div class="shot"><img src="img/bj.jpg" class="shot-img"><div class="shot-label">Screenshot J</div></div>
+    </div>
+  </section>
+
+</body>
+</html>
